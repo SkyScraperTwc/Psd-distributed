@@ -1,0 +1,80 @@
+ .quitCss{
+          width:650px;
+	      height:235px;
+	      color:#fff;
+	      color:#444;
+	      background:#fff;
+	      box-shadow:1px 2px 2px #555;
+	      display:none;
+    }
+
+ .quitCss h4{
+  		     height:26px;
+			 line-height:26px;
+			 overflow:hidden; 
+   			 background: #4F4F4F;
+   			 color:#fff;
+   			 padding:0 10px;
+   			 border:1px solid #4F4F4F;
+   			 font-size:14px;
+   			 border-bottom:1px solid #4F4F4F;
+    }
+
+ .quitCss h4 a{
+   			  width:14px;
+  			  line-height:13px;
+  			  _line-height:15px;
+  			  height:13px;
+  			  font-family:arial;
+  			  overflow:hidden;
+  			  display:block;
+  			  background:#fff;
+  			  color:#c77405;
+  			  float:right;
+  			  text-align:center;
+  			  text-decoration:none;
+  			  margin-top:7px;
+  			  font-size:14px;
+  			  font-weight:normal;
+  			  border-radius:2px;
+  			  _font-size:12px;}
+
+ .quitCss p{
+ 		    padding:30px 10px;
+		    font-size:13px;
+		    border:1px solid #ccc;
+}
+		    
+ .quitCss .innerDiv{
+			width:500px;
+			height:470px;
+			padding:20px 100px;
+			font-size:20px;
+}
+			
+.quitCss #quitTable{
+	padding:5px;
+	width: 90%;
+	
+}
+.quitCss #cap{
+	border-bottom: 2px #ccc;
+	padding:15px;
+} 
+
+.quitCss #quitTable td{
+	padding: 25px 0px;
+}  
+
+.quitCss .btn_submit{
+	 	   display:block;
+	       width:100px;
+  	       height:40px; 
+  	       background:#F30;
+  	       color:#fff; 
+  	       font-size:18px; 
+  	       text-align:center; 
+  	       line-height:40px;
+  	       border-radius:4px; 
+  	       transition:all .3s ease-in-out;
+}

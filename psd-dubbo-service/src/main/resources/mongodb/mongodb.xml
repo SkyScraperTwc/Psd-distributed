@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:mongo="http://www.springframework.org/schema/data/mongo"  
+    xsi:schemaLocation="http://www.springframework.org/schema/context   
+          http://www.springframework.org/schema/context/spring-context-4.2.xsd
+          http://www.springframework.org/schema/data/mongo   
+          http://www.springframework.org/schema/data/mongo/spring-mongo-1.8.xsd
+          http://www.springframework.org/schema/beans 
+          http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <context:property-placeholder location="classpath:mongodb/mongodb.properties"/>
+
+    <!--连接池配置-->
+    <mongo:mongo-client id="mongoClient" host="${mongo.host}" port="${mongo.port}">
+        <mongo:client-options  connections-per-host="${mongo.connectionsPerHost}"
+                               min-connections-per-host="${mongo.minConnectionsPerHost}"
+                               threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"
+                               connect-timeout="${mongo.connectTimeout}"
+                               max-wait-time="${mongo.maxWaitTime}"
+                               socket-keep-alive="${mongo.socketKeepAlive}"
+                               socket-timeout="${mongo.socketTimeout}"
+                               max-connection-idle-time="${mongo.maxConnectionIdleTime}"
+                               max-connection-life-time="${mongo.maxConnectionLifeTime}"
+                               heartbeat-socket-timeout="${mongo.heartbeatSocketTimeout}"
+                               heartbeat-connect-timeout="${mongo.heartbeatConnectTimeout}"
+                               min-heartbeat-frequency="${mongo.minHeartbeatFrequency}"
+                               heartbeat-frequency="${mongo.heartbeatFrequency}"/>
+    </mongo:mongo-client>
+
+    <!--连接池工厂配置-->
+    <mongo:db-factory id="mongoDbFactory" dbname="${mongo.dbname}" mongo-ref="mongoClient"/>
+
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,67 @@
+#content{
+	position:absolute;
+	margin-left: 200px; 
+}
+
+*{ 
+	font-size:16px;
+}
+#title{
+	height: 31px;
+	line-height: 28px;
+}
+.title{
+	height: 26px;
+    width: 85px;
+    text-align:center;
+    font-weight:bold;
+}
+
+
+#position{
+	border-bottom: 2px dotted #ccc;
+	padding:5px;
+}
+
+#cap{
+	border-bottom: 2px dotted #ccc;
+	padding:4px;
+	background-color:#FFDEAD  ;  
+}
+
+#list_tb,#list_tb th,#list_tb td{
+	width: 1000px;
+	border: 1px solid #999;
+	border-collapse: collapse;
+}
+#list_tb th,#list_tb td{
+	height: 40px;
+	/*a{text-decoration: none;}*/
+}
+
+#search td{
+	height: 58px;
+	/*padding: 65px;*/
+}
+
+#button {
+	/*padding-top: 0px;*/
+	width: 70px;
+}
+/*.tbody a{
+	text-decoration: none;
+}*/
+
+.like_btn{
+	background-color:#FFDEAD    ;
+	padding: 3px 8px;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	text-decoration: none;
+	color: #333333;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.like_btn:hover{
+	color: #FF4500;
+}

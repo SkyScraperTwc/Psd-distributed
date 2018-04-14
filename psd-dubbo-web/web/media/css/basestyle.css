@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color :rgba(0, 0, 0, 0); -moz-tap-highlight-color :rgba(0, 0, 0, 0);}
+body {font-family:Microsoft YaHei, Arial; margin: 0; font-size:12px;  line-height: 1.6; color: #333333; background-color: #fff;-webkit-overflow-scrolling: touch;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+svg:not(:root) { overflow: hidden; }
+.hide{ overflow:hidden;}
+.clearfiexd{clear:both;}
+.posre{position:relative;}
+.fl{float:left;}
+.fr{float:right;}
+
+a { background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent; color: #333; }
+a:active { outline: 0; }
+a:active { color: #0088cc; }
+b, strong { font-weight: bold; }
+em,s,i{font-style:normal;}
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; vertical-align: middle; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+pre { overflow: auto; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+em{font-family:Arial, Helvetica, sans-serif;}
+
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; outline:none; border:0; font-family: Helvetica,STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;}
+button { overflow: visible; }
+button, select { text-transform: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input { line-height: normal; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+legend { border: 0; padding: 0; }
+textarea { overflow: auto; resize: vertical; }
+optgroup { font-weight: bold; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+
+button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
+ul, ol, li, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none outside none; }
+.cl:after,.cl:before{clear:both; content:""; display:block;}
+
+/*分页*/
+.listPage { clear: both; margin: 50px 0 20px 0; width: 100%;height: 50px; }
+.pageBtn { margin: 0 auto; text-align: center; cursor: default; }
+.pageBtn a,.pageBtn span.disabled,.pageBtn span.current {padding: 5px 15px; font-size: 14px; color: #666; border: 1px solid #c3c3c3; margin: 0 3px; cursor: pointer; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+.pageBtn span.disabled {color: #999; border: 1px solid #ddd; box-shadow:inset 0 2px 3px #ddd;}
+.pageBtn span.current{color: #fff; background: #ffc118; box-shadow:inset 0 3px 5px #e3a700;  border: 1px solid #eda223;}
+.pageBtn span {padding: 5px 10px; font-size: 14px; color: #ABABAB; margin: 0 0px;}
+.pageBtn span i,.pageBtn a i{margin:0 5px;}
+.pageBtn span:hover i,.pageBtn a:hover i{color:#fff;}
+.pageBtn span.disabled:hover i,.pageBtn a.disabled:hover i{color:#999;}
+.pageBtn span.prev, .pageBtn span.next, .pageBtn span.current {cursor: default; }
+.pageBtn a:hover, .pageBtn a.prev:hover, .pageBtn a.next:hover, .pageBtn a.btn-skipsearch:hover {background: #ffc118; box-shadow:inset 0 3px 5px #e3a700; color: #fff; border: 1px solid #eda223; transition: 0.3s ease; -moz-transition:0.3s ease; -webkit-transition:0.3s ease; }
+.pageBtn span.page-skip { border: 0; }
+.pageBtn span.noneb { border: 0; cursor: default; }
+.jumpto { width: 32px; height: 16px; margin: -2px 2px 0; line-height: 16px; font-size: 14px; color: #999; text-align: center; vertical-align: middle; border: 1px solid #ccc; padding:5px 0;}
+.pageBtn a.btn-skipsearch { padding: 3px 8px; background: #eee; }

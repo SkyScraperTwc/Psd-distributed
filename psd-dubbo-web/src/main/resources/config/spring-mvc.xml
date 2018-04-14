@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-4.0.xsd
+						http://www.springframework.org/schema/mvc 
+						http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+   					    http://www.springframework.org/schema/aop 
+						http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+	<context:component-scan base-package="com.scut.psd.web" />
+
+	<import resource="classpath:/dubbo/psd-web-consumer.xml" />
+
+	<!-- 使@Aspect注解起作用：为目标类生成代理对象 -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+			<property name="prefix" value="/WEB-INF/pages"></property>
+			<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<!-- 拦截器 -->
+	<mvc:interceptors>
+			<mvc:interceptor>
+				<mvc:mapping path="/**"/>
+				<bean class="com.scut.psd.web.filter.EncodingInterceptor"/>
+			</mvc:interceptor>
+			<mvc:interceptor>
+				<mvc:mapping path="/**"/>
+				<mvc:exclude-mapping path="/media/**"/>
+				<mvc:exclude-mapping path="/user/**"/>
+				<mvc:exclude-mapping path="/authcode.img"/>
+				<bean class="com.scut.psd.web.filter.LoginInterceptor"/>
+			</mvc:interceptor>
+    </mvc:interceptors>
+
+	<!--静态资源处理 -->
+	<mvc:default-servlet-handler></mvc:default-servlet-handler>
+	<!-- 配置mvc:view-controller必须配置mvc:annotation-driven -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+
+
+</beans>        
+             

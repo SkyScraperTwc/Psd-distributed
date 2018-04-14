@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	   http://code.alibabatech.com/schema/dubbo
+	   http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<dubbo:application name="psd-web-consumer" owner="scut-twc"/>
+
+	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
+
+	<dubbo:reference interface="com.scut.psd.api.service.AlgorithmHandleService" id="algorithmHandleService" />
+
+	<dubbo:reference interface="com.scut.psd.api.service.UserService" id="userService" />
+
+</beans>  

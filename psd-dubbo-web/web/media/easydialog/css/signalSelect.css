@@ -1,0 +1,84 @@
+ .signalSelectFormCss{
+          width:650px;
+	      height:640px;
+	      color:#fff;
+	      color:#444;
+	      background:#fff;
+	      box-shadow:1px 2px 2px #555;
+	      display:none;}
+
+ .signalSelectFormCss h4{
+  		     height:26px;
+			 line-height:26px;
+			 overflow:hidden; 
+   			 background: #4F4F4F;
+   			 color:#fff;
+   			 padding:0 10px;
+   			 border:1px solid #4F4F4F;
+   			 font-size:14px;
+   			 border-bottom:1px solid #4F4F4F;}
+
+ .signalSelectFormCss h4 a{
+   			  width:14px;
+  			  line-height:13px;
+  			  _line-height:15px;
+  			  height:13px;
+  			  font-family:arial;
+  			  overflow:hidden;
+  			  display:block;
+  			  background:#fff;
+  			  color:#c77405;
+  			  float:right;
+  			  text-align:center;
+  			  text-decoration:none;
+  			  margin-top:7px;
+  			  font-size:14px;
+  			  font-weight:normal;
+  			  border-radius:2px;
+  			  _font-size:12px;}
+
+ .signalSelectFormCss p{
+ 		    padding:30px 10px;
+		    font-size:13px;
+		    border:1px solid #ccc;
+}
+		    
+ .signalSelectFormCss .innerDiv{
+			width:500px;
+			height:470px;
+			padding:20px 100px;
+			font-size:20px;
+}
+			
+.signalSelectFormCss #signalDataTable{
+	padding:5px;
+	width: 90%;
+	
+}
+.signalSelectFormCss #cap{
+	border-bottom: 2px dotted #ccc;
+	padding:15px;
+} 
+
+/* 每一行之间的间距 */
+.signalSelectFormCss #signalDataTable td{ 
+	padding: 25px 0px;
+}  
+
+/* input标签 */
+.signalSelectFormCss #signalDataTable input{ 
+	border:1px solid black;
+}
+
+.signalSelectFormCss .btn_submit{
+	 	   display:block;
+	       width:100px;
+  	       height:40px; 
+  	       background:#F30;
+  	       color:#fff; 
+  	       font-size:18px; 
+  	       text-align:center; 
+  	       line-height:40px;
+  	       border-radius:4px; 
+  	       transition:all .3s ease-in-out;
+}

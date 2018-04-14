@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	
+	<!-- 配置dispatcherServlet -->
+	<!-- DispatcherServlet负责对容器（WebApplicationContext）进行初始化。
+					容器（WebApplicationContext）将读取SpringMVC的核心配置文件进行组件实例化。 -->
+
+			<!-- 这里的DispatcherServlet被我们称之为核心分发器,前端控制器，是SpringMVC最重要的类之一 -->
+			<!--
+				实际上也可以不通过 contextConfigLocation 来配置 SpringMVC 配置文件, 而使用默认的.
+				默认的配置文件为: /WEB-INF/<servlet-name>-servlet.xml,然后创建WEB 层
+				的 Spring 容器，即是springmvc ioc容器。
+			-->
+			<!-- 必须的配置
+				1)load-on-startup元素标记容器是否在启动的时候就加载这个servlet(实例化并调用其init()方法)。
+				2)它的值必须是一个整数，表示servlet应该被载入的顺序
+				2)当值为0或者大于0时，表示容器在应用启动时就实例化并初始化这个servlet；
+			-->
+	<servlet>
+			<servlet-name>dispatcherServlet</servlet-name>
+			<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+			<init-param>  
+					<param-name>contextConfigLocation</param-name>
+					<param-value>classpath:config/spring-mvc.xml</param-value>
+			</init-param>     
+			<load-on-startup>1</load-on-startup>  
+	</servlet>   
+	       
+	<servlet-mapping>  
+		<servlet-name>dispatcherServlet</servlet-name> 
+		<url-pattern>/</url-pattern>
+	</servlet-mapping> 
+	
+</web-app>

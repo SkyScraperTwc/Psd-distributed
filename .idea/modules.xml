@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Psd-distributed.iml" filepath="$PROJECT_DIR$/Psd-distributed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/psd-dubbo-algorithm/psd-dubbo-algorithm.iml" filepath="$PROJECT_DIR$/psd-dubbo-algorithm/psd-dubbo-algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/psd-dubbo-api/psd-dubbo-api.iml" filepath="$PROJECT_DIR$/psd-dubbo-api/psd-dubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/psd-dubbo-common/psd-dubbo-common.iml" filepath="$PROJECT_DIR$/psd-dubbo-common/psd-dubbo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/psd-dubbo-service/psd-dubbo-service.iml" filepath="$PROJECT_DIR$/psd-dubbo-service/psd-dubbo-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/psd-dubbo-web/psd-dubbo-web.iml" filepath="$PROJECT_DIR$/psd-dubbo-web/psd-dubbo-web.iml" />
+    </modules>
+  </component>
+</project>
